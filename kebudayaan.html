@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Border with Collapse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ucp2.css">
+    <style>
+        body {
+            background-image: url('lpng.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding-top: 70px; /* Add padding to avoid overlap with fixed navbar */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.4rem; /* Adjust font size */
+            transition: color 0.3s ease;
+        }
+
+        .nav-link.active, .nav-link:hover {
+            color: #f0a500;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Adjust hover background color */
+        }
+
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .circle-item {
+            text-align: center;
+            margin: 20px; /* Add more space between circle items */
+        }
+
+        .circle-item p {
+            font-size: 1rem; /* Adjust font size */
+        }
+
+        .img-circle {
+            border: 5px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            width: 300px; /* Adjust width */
+            height: 300px; /* Adjust height */
+            transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+        }
+
+        .img-circle:hover {
+            transform: scale(1.1); /* Add scale effect on hover */
+        }
+
+        .collapse-text {
+            margin-top: 20px; /* Add more space between collapsed text and image */
+            background-color: rgba(46, 46, 46, 0.8); /* Adjust background color */
+            border: 2px solid #ffffff;
+            padding: 20px; /* Adjust padding */
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            font-size: 1.2rem; /* Adjust font size */
+        }
+
+        .img-circle {
+    border: 5px solid #fff;
+    border-radius: 10% 50% 30% 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    width: 300px; /* Adjust width */
+    height: 300px; /* Adjust height */
+    transition: transform 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="nav-link active">DASBOR</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link">DESTINATION<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Lampung.html">LAMPUNG</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-link">KULTUR KEBUDAYAAN<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="kebudayaan.html">BUDAYA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-link">BIO<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="profil.html">PROFIL</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="circle-container">
+        <div class="circle-item">
+            <p><strong>TAYUHAN</strong></p>
+            <a href="#foto1" data-toggle="collapse">
+                <img src="tayuhan.jpg" class="img-circle" alt="Tayuhan">
+            </a>
+            <div id="foto1" class="collapse collapse-text">
+                <p style="font-size: 2.2rem;">Tayuhan adalah upacara adat Lampung yang dilakukan untuk merayakan suka cita, seperti pernikahan, khitanan, hasil panen yang berlimpah, hingga pembangunan rumah.</p>
+            </div>
+        </div>
+        <div class="circle-item">
+            <p><strong>TARI BEDANA</strong></p>
+            <a href="#foto2" data-toggle="collapse">
+                <img src="tari_bedana.jpg" class="img-circle" alt="Tari bedana">
+            </a>
+            <div id="foto2" class="collapse collapse-text">
+                <p style="font-size: 2.2rem;">Tarian Bedana merefleksikan bentuk penjagaan diri terutama terhadap pemuda pemudi lampung untuk pergaulan agar hati-hati. Tarian ini mulanya hanya dilakukan oleh laki-laki dan ditonton oleh keluarganya saja.</p>
+            </div>
+        </div>
+        <div class="circle-item">
+            <p><strong>GAWI ATAU PEPADUN</strong></p>
+            <a href="#foto3" data-toggle="collapse">
+                <img src="gawi_pepadun.jpg" class="img-circle" alt="Gawi atau Pepadun">
+            </a>
+            <div id="foto3" class="collapse collapse-text">
+                <p style="font-size: 2.2rem;">Gawi atau Begawi. Tradisi Gawi atau Begawi dilaksanakan untuk ritual kehidupan, di antaranya kelahiran anak, menjelang dan saat pernikahan hingga pemberian gelar adat Begawi Cakak Pepadun.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

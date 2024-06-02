@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="ucp2.css">
+    <style>
+        body {
+            background-image: url('bck1.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Roboto Slab', serif; /* Menggunakan jenis font latin */
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .nav-link.active {
+            font-weight: bold;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .text1 {
+            text-align: center;
+            font-size: 4rem;
+            color: white;
+            margin-top: 2rem;
+        }
+        .box {
+            position: relative;
+            color: white;
+            margin: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            font-size: 1.5rem; /* Increase font size */
+            overflow: hidden; /* Ensure child elements don't overflow the rounded corners */
+        }
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5; /* Adjust the transparency level here */
+            z-index: -1; /* Ensure the background stays behind the content */
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            /* Adjust the clip-path to form a star shape */
+        }
+        section {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="nav-link active">DASBOR</a>
+        <div class="dropdown">
+            <a href="#" class="nav-link">DESTINATION<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="Lampung.html">LAMPUNG</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-link">KULTUR KEBUDAYAAN<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="kebudayaan.html">BUDAYA</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="nav-link">BIO<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="profil.html">PROFIL</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text1">
+            <p>LAMPUNG PRIDE</p>
+        </div>
+    </main>
+
+    <section>
+        <div class="box">
+            <p>
+                Lampung bagi sebagian orang adalah kota yang terkenal dengan aksi kejahatan yang tidak main-main, tetapi jika Anda mengenal Lampung lebih dalam lagi, Anda akan takjub dengan budaya dan destinasi yang ada, seperti:
+            </p>
+            <ul>
+                <li>Pantai Lampung yang terkenal dengan julukan Raja Ampat-nya Lampung yang tidak kalah menarik untuk menjadi perhatian turis dari luar negeri.</li>
+                <li>Kesenian dengan jenis kesenian tari yang begitu melekat di berbagai wilayahnya dengan ciri khasnya.</li>
+                <li>Siger, salah satu monumen kebanggaan orang Sumatera khususnya kota Lampung, yang berada di puncak bukit dekat dengan pelabuhan Bakauheni-Merak.</li>
+                <li>Lampung juga memiliki gunung berapi bernama Gunung Krakatau yang sangat dahsyat saat meletus pada tahun 1883 yang berdampak sangat besar terhadap permukiman di pantai barat Teluk Lampung.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
